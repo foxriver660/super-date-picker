@@ -8,8 +8,7 @@ import { MainPopup } from "../MainPopup/MainPopup";
 import { AddPopup } from "../AddPopup/AddPopup";
 import { useDateContext } from "../../context";
 import { formatTime, formatDate, reverseParseDate } from "../../utils/helpers";
-import {Popup} from "../../UI";
-
+import { Popup } from "../../UI";
 
 interface SelectedDateTime {
   date: string | null;
@@ -66,11 +65,11 @@ export const DataPicker: FC<IDataPickerProps> = ({ selectedRange }) => {
 
   useEffect(() => {
     selectedStart.date &&
-      !isStartDateGreaterThanEndDate &&
+      isStartDateGreaterThanEndDate &&
       addUniqueRange(
         `${formatDateStart}/${formatTimeStart}→${formatDateEnd}/${formatTimeEnd}`
       );
-  }, [selectedStart && selectedEnd && isUpdate]);
+  }, [isUpdate]);
 
   const [showPopup, setShowPopup] = useState(false);
   const [showPopupStartDate, setShowPopupStartDate] = useState(false);
