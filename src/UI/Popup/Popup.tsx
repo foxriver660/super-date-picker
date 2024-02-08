@@ -2,7 +2,7 @@
 import  { useRef, useEffect } from "react";
 import "./Popup.css";
 
-const Popup = ({ toggle, children }) => {
+export const Popup = ({ toggle, children }) => {
   const popupRef = useRef<HTMLDivElement>(null);
 
   const handleOutsideClick = (e) => {
@@ -25,4 +25,4 @@ const Popup = ({ toggle, children }) => {
   );
 };
 
-export default Popup;
+

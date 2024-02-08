@@ -3,9 +3,8 @@
 import { useState, useEffect } from "react";
 import style from "./RecentlyUsed.module.css";
 import { IDates, useDateContext } from "../../../context/context";
-import { formatForCommonUsed } from "../../../utils/helpers/formatForCommonUsed";
-import { reverseParseDate } from "../../../utils/helpers/reverseParseDate";
-import { formatDateFromRelative } from "../../../utils/helpers/formatDateFromRelative";
+import { formatForCommonUsed, reverseParseDate, formatDateFromRelative } from "../../../utils/helpers";
+
 
 export const RecentlyUsed = () => {
   const [selectedItem, setSelectedItem] = useState("");

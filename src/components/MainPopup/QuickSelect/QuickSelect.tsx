@@ -1,13 +1,8 @@
 import { useState } from "react";
-import { NumberInput } from "../../../UI/NumberInput/NumberInput";
-import Select from "../../../UI/Select/Select";
-import { formatForQuickSelect } from "../../../utils/helpers/formatForQuickSelect";
-import { useDateContext } from "../../../context/context";
-import {
-  gradationRus,
-  selectedOrderRus,
-} from "../../../utils/helpers/convertValueToRus";
 import style from "./QuickSelect.module.css";
+import { NumberInput, Select } from "../../../UI";
+import { useDateContext } from "../../../context/context";
+import { gradationRus, selectedOrderRus, formatForQuickSelect } from "../../../utils/helpers";
 
 const selectorOptionsOrder = [
   { value: "previous", label: "Предыдущие" },

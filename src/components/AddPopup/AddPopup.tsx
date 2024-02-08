@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, FC } from "react";
-import Tab from "../../UI/Tab/Tab";
 import style from "./AddPopup.module.css";
+import { Tab } from "../../UI";
 import { AbsoluteTab } from "./AbsoluteTab/AbsoluteTab";
 import { RelativeTab } from "./RelativeTab/RelativeTab";
 import { useDateContext } from "../../context/context";
-import { formatTime } from "../../utils/helpers/formatTime";
-import { updateDateTime } from "../../utils/helpers/updateDateTime";
+import { updateDateTime, formatTime } from "../../utils/helpers";
 
 interface IAddPopup {
   startingPoint: "start" | "end";

@@ -1,7 +1,7 @@
 import { useState, FC } from "react";
 import style from "./CommonUsed.module.css";
 import { IDates, useDateContext } from "../../../context/context";
-import { formatForCommonUsed } from "../../../utils/helpers/formatForCommonUsed";
+import { formatForCommonUsed } from "../../../utils/helpers";
 
 const commonItems = [
   "Сегодня",

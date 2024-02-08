@@ -8,7 +8,7 @@ interface ITabProps {
   onClick: (arg: string) => void;
 }
 
-const Tab: FC<ITabProps> = ({ active, value, children, onClick }) => {
+export const Tab: FC<ITabProps> = ({ active, value, children, onClick }) => {
   const className = `tab ${active ? "tab_type_current" : ""} `;
 
   const handleClick = useCallback(() => {
@@ -24,4 +24,3 @@ const Tab: FC<ITabProps> = ({ active, value, children, onClick }) => {
   );
 };
 
-export default Tab;

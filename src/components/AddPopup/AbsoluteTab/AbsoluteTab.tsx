@@ -1,12 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, FC } from "react";
-import { DateContainer } from "../../../UI/DateContainer/DateContainer";
 import { TimePicker } from "../../TimePicker/TimePicker";
 import { Calendar } from "../../Calendar/Calendar";
-import { formatDate } from "../../../utils/helpers";
-import { Divider } from "../../../UI/Divider/Divider";
+import { formatDate, formatTime } from "../../../utils/helpers";
+import { Divider, DateContainer } from "../../../UI";
 import { useDateContext } from "../../../context/context";
-import { formatTime } from "../../../utils/helpers/formatTime";
 
 interface IAbsolute {
   startingPoint: "start" | "end";

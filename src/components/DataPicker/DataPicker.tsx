@@ -3,14 +3,13 @@ import React, { useState, useEffect, FC } from "react";
 import style from "./DataPicker.module.css";
 import { LuArrowBigRightDash } from "react-icons/lu";
 import { IoCalendarOutline } from "react-icons/io5";
+import { IoArrowDown } from "react-icons/io5";
 import { MainPopup } from "../MainPopup/MainPopup";
 import { AddPopup } from "../AddPopup/AddPopup";
-import { reverseParseDate } from "../../utils/helpers/reverseParseDate";
 import { useDateContext } from "../../context/context";
-import { formatDate } from "../../utils/helpers";
-import { formatTime } from "../../utils/helpers/formatTime";
-import Popup from "../../UI/Popup/Popup";
-import { IoArrowDown } from "react-icons/io5";
+import { formatTime, formatDate, reverseParseDate } from "../../utils/helpers";
+import {Popup} from "../../UI";
+
 
 interface SelectedDateTime {
   date: string | null;
@@ -26,6 +25,18 @@ interface IDataPickerProps {
 
 export const DataPicker: FC<IDataPickerProps> = ({ selectedRange }) => {
   const [isRangeLook, setIsRangeLook] = useState(false);
+  const { isUpdate, choosenRange, addUniqueRange, choosenFormatedDate } =
+    useDateContext();
+  const formatDateStart = formatDate(
+    choosenFormatedDate.startDate as Date,
+    "DDD DD MMM YYYY"
+  );
+  const formatTimeStart = formatTime(choosenFormatedDate.startDate) as string;
+  const formatDateEnd = formatDate(
+    choosenFormatedDate.endDate as Date,
+    "DDD DD MMM YYYY"
+  );
+  const formatTimeEnd = formatTime(choosenFormatedDate.endDate) as string;
 
   const [selectedStart, setSelectedStart] = React.useState<SelectedDateTime>({
     date: null,
@@ -35,20 +46,15 @@ export const DataPicker: FC<IDataPickerProps> = ({ selectedRange }) => {
     date: null,
     time: null,
   });
-  const { isUpdate, choosenRange, addUniqueRange, choosenFormatedDate } =
-    useDateContext();
 
   useEffect(() => {
     setSelectedStart({
-      date: formatDate(
-        choosenFormatedDate.startDate as Date,
-        "DDD DD MMM YYYY"
-      ),
-      time: formatTime(choosenFormatedDate.startDate) as string,
+      date: formatDateStart,
+      time: formatTimeStart,
     });
     setSelectedEnd({
-      date: formatDate(choosenFormatedDate.endDate as Date, "DDD DD MMM YYYY"),
-      time: formatTime(choosenFormatedDate.endDate) as string,
+      date: formatDateEnd,
+      time: formatTimeEnd,
     });
     selectedRange(choosenFormatedDate);
   }, [choosenFormatedDate]);
@@ -61,11 +67,8 @@ export const DataPicker: FC<IDataPickerProps> = ({ selectedRange }) => {
   useEffect(() => {
     selectedStart.date &&
       !isStartDateGreaterThanEndDate &&
-      console.log("ЗАПИСАЛО", selectedStart, choosenFormatedDate);
-    selectedStart.date &&
-      !isStartDateGreaterThanEndDate &&
       addUniqueRange(
-        `${selectedStart.date}/${selectedStart.time}→${selectedEnd.date}/${selectedEnd.time}`
+        `${formatDateStart}/${formatTimeStart}→${formatDateEnd}/${formatTimeEnd}`
       );
   }, [selectedStart && selectedEnd && isUpdate]);
 

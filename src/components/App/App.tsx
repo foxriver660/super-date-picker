@@ -4,7 +4,7 @@ import { DateProvider } from "../../context/context";
 function App() {
   return (
     <DateProvider>
-      <DataPicker selectedRange={(data) => console.log()} />
+      <DataPicker selectedRange={(dates) => console.log(dates)} />
     </DateProvider>
   );
 }

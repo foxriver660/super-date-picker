@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Select = ({ value, onChange, options }) => {
+export const Select = ({ value, onChange, options }) => {
   const [selectedValue, setSelectedValue] = useState(value);
 
   const handleSelectChange = (event) => {
@@ -23,4 +23,4 @@ const Select = ({ value, onChange, options }) => {
     </select>
   );
 };
-export default Select;
+

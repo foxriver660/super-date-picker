@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { FC, useEffect, useState } from "react";
 import "./TimePicker.css";
-import { formatTimeForAbsolute } from "../../utils/helpers/formatTimeForAbsolute";
+import { formatTimeForAbsolute } from "../../utils/helpers";
 
 interface ITimePicker {
   onTimeSelected: (arg) => void;

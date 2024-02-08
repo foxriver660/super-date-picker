@@ -1,10 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, FC } from "react";
-import { NumberInput } from "../../../UI/NumberInput/NumberInput";
-import Select from "../../../UI/Select/Select";
-import { DateContainer } from "../../../UI/DateContainer/DateContainer";
 import { formatDate } from "../../../utils/helpers";
-import { Divider } from "../../../UI/Divider/Divider";
+import { Divider, DateContainer, Select, NumberInput } from "../../../UI";
 import { useDateContext } from "../../../context/context";
 
 interface IRelativeProps {
