@@ -4,7 +4,7 @@ import style from "./AddPopup.module.css";
 import { Tab } from "../../UI";
 import { AbsoluteTab } from "./AbsoluteTab/AbsoluteTab";
 import { RelativeTab } from "./RelativeTab/RelativeTab";
-import { useDateContext } from "../../context/context";
+import { useDateContext } from "../../context";
 import { updateDateTime, formatTime } from "../../utils/helpers";
 
 interface IAddPopup {

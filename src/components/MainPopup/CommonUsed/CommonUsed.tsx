@@ -1,6 +1,6 @@
 import { useState, FC } from "react";
 import style from "./CommonUsed.module.css";
-import { IDates, useDateContext } from "../../../context/context";
+import { IDates, useDateContext } from "../../../context";
 import { formatForCommonUsed } from "../../../utils/helpers";
 
 const commonItems = [

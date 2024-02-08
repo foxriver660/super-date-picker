@@ -2,7 +2,7 @@
 /* eslint-disable no-useless-escape */
 import { useState, useEffect } from "react";
 import style from "./RecentlyUsed.module.css";
-import { IDates, useDateContext } from "../../../context/context";
+import { IDates, useDateContext } from "../../../context";
 import { formatForCommonUsed, reverseParseDate, formatDateFromRelative } from "../../../utils/helpers";
 
 

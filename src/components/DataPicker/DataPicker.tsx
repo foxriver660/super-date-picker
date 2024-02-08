@@ -6,7 +6,7 @@ import { IoCalendarOutline } from "react-icons/io5";
 import { IoArrowDown } from "react-icons/io5";
 import { MainPopup } from "../MainPopup/MainPopup";
 import { AddPopup } from "../AddPopup/AddPopup";
-import { useDateContext } from "../../context/context";
+import { useDateContext } from "../../context";
 import { formatTime, formatDate, reverseParseDate } from "../../utils/helpers";
 import {Popup} from "../../UI";
 

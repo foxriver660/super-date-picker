@@ -4,7 +4,7 @@ import { TimePicker } from "../../TimePicker/TimePicker";
 import { Calendar } from "../../Calendar/Calendar";
 import { formatDate, formatTime } from "../../../utils/helpers";
 import { Divider, DateContainer } from "../../../UI";
-import { useDateContext } from "../../../context/context";
+import { useDateContext } from "../../../context";
 
 interface IAbsolute {
   startingPoint: "start" | "end";

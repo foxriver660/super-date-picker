@@ -2,7 +2,7 @@
 import { useState, useEffect, FC } from "react";
 import { formatDate } from "../../../utils/helpers";
 import { Divider, DateContainer, Select, NumberInput } from "../../../UI";
-import { useDateContext } from "../../../context/context";
+import { useDateContext } from "../../../context";
 
 interface IRelativeProps {
   startingPoint: "start" | "end";

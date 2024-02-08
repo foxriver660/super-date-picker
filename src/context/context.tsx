@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
 export interface IDates {
   startDate: Date;
@@ -14,7 +14,7 @@ export interface IDateContextProps {
   setIsUpdate: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const DateContext = createContext<IDateContextProps | undefined>(undefined);
+export const DateContext = createContext<IDateContextProps | undefined>(undefined);
 
 export const DateProvider = ({ children }: { children: React.ReactNode }) => {
   const [choosenRange, setChoosenRange] = useState<string[]>([]);
@@ -45,10 +45,4 @@ export const DateProvider = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export const useDateContext = (): IDateContextProps => {
-  const context = useContext(DateContext);
-  if (!context) {
-    throw new Error("Ошибка");
-  }
-  return context;
-};
+

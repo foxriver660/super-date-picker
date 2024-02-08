@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from "./QuickSelect.module.css";
 import { NumberInput, Select } from "../../../UI";
-import { useDateContext } from "../../../context/context";
+import { useDateContext } from "../../../context";
 import { gradationRus, selectedOrderRus, formatForQuickSelect } from "../../../utils/helpers";
 
 const selectorOptionsOrder = [

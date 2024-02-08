@@ -3,7 +3,7 @@ import { QuickSelect } from "./QuickSelect/QuickSelect";
 import { CommonUsed } from "./CommonUsed/CommonUsed";
 import { RecentlyUsed } from "./RecentlyUsed/RecentlyUsed";
 import { Divider } from "../../UI";
-import { useDateContext } from "../../context/context";
+import { useDateContext } from "../../context";
 
 export const MainPopup: FC = () => {
 
