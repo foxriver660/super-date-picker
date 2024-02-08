@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React from "react";
 
 import {
@@ -64,7 +66,7 @@ export const useCalendar = ({ locale = "default", selectedDate: date, firstWeekD
 
     const totalCalendarDays = days.length + numberOfPrevDays + numberOfNextDays;
 
-    const result = [];
+    const result: any[] = [];
 
     for (let i = 0; i < numberOfPrevDays; i += 1) {
       const inverted = numberOfPrevDays - i;

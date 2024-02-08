@@ -23,14 +23,14 @@
   width: 5px;
   height: 10px;
   cursor: pointer;
-  background-image: url("../../static/images/arrow.svg");
+  background-image: url("../../assets/arrow.svg");
 }
 
 .calendar__header__arrow__right {
   width: 5px;
   height: 10px;
   cursor: pointer;
-  background-image: url("../../static/images/arrow.svg");
+  background-image: url("../../assets/arrow.svg");
   transform: rotate(-180deg);
 }
 
