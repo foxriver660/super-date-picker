@@ -1,3 +1,7 @@
-https://foxriver660.github.io/super-date-picker/
+Универсальный компонент выбора дат.
+Установка и запуск:
+- npm install
+- npm dev
+
 
 
