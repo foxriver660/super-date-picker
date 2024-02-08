@@ -61,16 +61,14 @@ export const DataPicker: FC<IDataPickerProps> = ({ selectedRange }) => {
   const parsedStartDate = reverseParseDate(selectedStart);
   const parsedEndDate = reverseParseDate(selectedEnd);
   const isStartDateGreaterThanEndDate =
-    parsedStartDate && parsedEndDate && parsedStartDate > parsedEndDate;
+    parsedStartDate && parsedEndDate && (parsedStartDate > parsedEndDate);
 
   useEffect(() => {
-    selectedStart.date &&
-      isStartDateGreaterThanEndDate &&
-      addUniqueRange(
-        `${formatDateStart}/${formatTimeStart}→${formatDateEnd}/${formatTimeEnd}`
-      );
+    selectedStart.date && addUniqueRange(
+      `${formatDateStart}/${formatTimeStart}→${formatDateEnd}/${formatTimeEnd}`
+    );
   }, [isUpdate]);
-
+  console.log(choosenRange);
   const [showPopup, setShowPopup] = useState(false);
   const [showPopupStartDate, setShowPopupStartDate] = useState(false);
   const [showPopupEndDate, setShowPopupEndDate] = useState(false);

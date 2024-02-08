@@ -55,14 +55,14 @@ export const useCalendar = ({ locale = "default", selectedDate: date, firstWeekD
 
     const shiftIndex = firstWeekDayNumber - 1;
     const numberOfPrevDays =
-      firstDay.dayNumberInWeek - 1 - shiftIndex < 0
-        ? DAYS_IN_WEEK - (firstWeekDayNumber - firstDay.dayNumberInWeek)
-        : firstDay.dayNumberInWeek - 1 - shiftIndex;
+      firstDay?.dayNumberInWeek - 1 - shiftIndex < 0
+        ? DAYS_IN_WEEK - (firstWeekDayNumber - firstDay?.dayNumberInWeek)
+        : firstDay?.dayNumberInWeek - 1 - shiftIndex;
 
     const numberOfNextDays =
-      DAYS_IN_WEEK - lastDay.dayNumberInWeek + shiftIndex > 6
-        ? DAYS_IN_WEEK - lastDay.dayNumberInWeek - (DAYS_IN_WEEK - shiftIndex)
-        : DAYS_IN_WEEK - lastDay.dayNumberInWeek + shiftIndex;
+      DAYS_IN_WEEK - lastDay?.dayNumberInWeek + shiftIndex > 6
+        ? DAYS_IN_WEEK - lastDay?.dayNumberInWeek - (DAYS_IN_WEEK - shiftIndex)
+        : DAYS_IN_WEEK - lastDay?.dayNumberInWeek + shiftIndex;
 
     const totalCalendarDays = days.length + numberOfPrevDays + numberOfNextDays;
 
