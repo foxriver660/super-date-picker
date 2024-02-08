@@ -1,0 +1,125 @@
+.calendar {
+  width: 100%;
+  border-radius: 5px;
+  text-transform: capitalize;
+  /*  background-color: var(--background-color-calendar); */
+}
+
+.calendar__header {
+  position: relative;
+  border: 1px solid var(--border-color-select);
+  border-radius: var(--border-radius);
+  background-color: var(--color-select);
+  color: var(--text-color-select);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calendar__header__title {
+  cursor: pointer;
+}
+.calendar__header__arrow__left {
+  width: 5px;
+  height: 10px;
+  cursor: pointer;
+  background-image: url("../../static/images/arrow.svg");
+}
+
+.calendar__header__arrow__right {
+  width: 5px;
+  height: 10px;
+  cursor: pointer;
+  background-image: url("../../static/images/arrow.svg");
+  transform: rotate(-180deg);
+}
+
+.calendar__body {
+  border-radius: 0 0 5px 5px;
+  padding: 5px;
+}
+
+.calendar__week__names {
+  height: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-border-bottom);
+  text-align: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px 1px;
+}
+
+.calendar__days {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-main-border);
+  text-align: center;
+  font-weight: 400;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+}
+
+.calendar__day {
+  border-radius: var(--border-radius);
+  padding: 5.5px 0px;
+  cursor: pointer;
+}
+
+.calendar__day:hover {
+  background-color: var(--bg-hover);
+}
+
+.calendar__additional__day {
+  padding: 5.5px;
+  font-weight: 300;
+  cursor: pointer;
+  color: var(--border-color-select);
+}
+
+.calendar__pick__item {
+  padding: 9px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+.calendar__pick__item:hover {
+  background-color: var(--bg-hover);
+}
+
+.calendar__today__item {
+  background-color: var(--border-color-select);
+}
+
+.calendar__selected__item {
+  color: var(--color-main-border);
+  background-color: var(--success);
+}
+.calendar__selected__item:hover {
+  background-color: var(--color-selected-item);
+}
+
+.calendar__pick__items__container {
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1px 1px;
+  font-size: 14px;
+}
+
+.calendar__unchoosable__year {
+  font-weight: 300;
+  padding: 9px 16px;
+  color: var(--border-color-select);
+}

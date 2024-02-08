@@ -1,0 +1,44 @@
+.container {
+  margin: 0 auto;
+  position: relative;
+  min-width: 50vw;
+  border: 3px solid var(--color-main-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+.dateContainer {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: background-color 0.5s;
+}
+.dateContainer:hover {
+  background-color: var(--bg-hover);
+}
+.error {
+  background-color: var(--error);
+}
+.success {
+  background-color: var(--success);
+}
+.rangeContainer {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: black;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 5px;
+}
+.date {
+  white-space: nowrap;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+}

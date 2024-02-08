@@ -1,0 +1,19 @@
+.title {
+  padding: 2%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  list-style: none;
+}
+.item {
+  color: var(--color-border-bottom);
+  cursor: pointer;
+}
+.item:hover {
+  text-decoration: underline;
+}
+.selected {
+  color: var(--color-selected-item);
+}

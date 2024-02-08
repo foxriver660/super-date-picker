@@ -1,0 +1,14 @@
+.popup {
+  width: 600px;
+  max-height: 600px;
+  position: absolute;
+  top: calc(100% + 300px);
+  left: 42%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-white);
+  padding: 4%;
+  border: 1px solid var(--color-main-border);
+  border-radius: var(--border-radius);
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
